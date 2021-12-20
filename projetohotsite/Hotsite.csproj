@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework> <!-- Primeiro passo atualizar framework -->
+  </PropertyGroup>
+  <ItemGroup>&#xD;
+  </ItemGroup>
+  <ItemGroup>
+
+  <!-- dotnet toll install hifen hifen global dotnet-ef hifen hifen version 3.1.2 instalada-->
+  <!-- dotnet add package Nome do pactoe e as versão-->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.0.0"/>
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,81 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<div class="row mt-2">
+    <div class="col-md">
+        <h1>Iniciativa Saúde da Cidade</h1><br>
+        <p>
+            Texto sobre vida saudável: Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
+            depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros
+            vermeio, in elementis mé pra quem é amistosis quis leo.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num
+            significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+        </p>
+    </div>
+
+    <img src="~/imagens/saude_na_cidade.jpg" alt="Pessoa_fazendo_Ioga" class="img-fluid col-md ms-auto" />
+
+</div>
+<div class="row m-2">
+    <div class="col-md-5 border border-dark p-2">
+        <h2>Fala que a gente te escuta:</h2>
+        <p>Queremos te conhecer e te enviar só coisa legal</p>
+
+        <form action="/Home/Cadastrar" method="POST" id="formInteresse">
+            <div class="form-group row">
+                <label asp-for="Nome" class="col-sm-2 col-form-label">Nome:</label>
+                <div class="col-sm-10">
+                    <input asp-for="Nome" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Email" class="col-sm-2 col-form-label">Email:</label>
+                <div class="col-sm-10">
+                    <input asp-for="Email" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Mensagem" class="col-sm-2 col-form-label">Diga ai (opcional):</label>
+                <div class="col-sm-10">
+                    <textarea asp-for="Mensagem" class="form-control"></textarea>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Enviar" class="float-right" />
+            </div>
+        </form>
+        <partial name="_ModalCadastroSucesso" />
+        <partial name="_ModalCadastroFalha" />
+    </div>
+
+    <div class="col-md-6 offset-md-1 mt-2">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col text-center utilidades" id="eventos">
+                    <img src="~/imagens/agenda.jpg" alt="Agenda de Eventos" class="img-fluid" />
+                    <figcaption>
+                        <p>Agenda de eventos</p>
+                    </figcaption>
+                </div>
+                <partial name="_ModalEventos" />
+                <div class="col text-center utilidades" id="dicas">
+                    <img src="~/imagens/dicas.jpg" alt="Dicas de Saúde" class="img-fluid" />
+                    <figcaption>
+                        <p>Dicas de Vida Saudável</p>
+                    </figcaption>
+                </div>
+                <partial name="_ModalDicas" />
+                <div class="col text-center utilidades" id="apoiadores">
+                    <img src="~/imagens/apoiadores.png" alt="Apoiadores" class="img-fluid" />
+                    <figcaption>
+                        <p>Apoiadores</p>
+                    </figcaption>
+                </div>
+                <partial name="_ModalApoiadores" />
+            </div>
+        </div>
+    </div>
+</div>
